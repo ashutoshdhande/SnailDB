@@ -1,0 +1,28 @@
+# Ignore build directory
+/build/
+
+# Ignore object files
+*.o
+
+# Ignore executable files
+snaildb
+
+# Ignore compiled binaries
+*.out
+*.exe
+
+# Ignore backup and temporary files
+*~
+*.bak
+*.tmp
+
+# Ignore IDE and editor-specific files
+.vscode/
+*.code-workspace
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore other system files
+Thumbs.db
+ehthumbs.db
