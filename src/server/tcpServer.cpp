@@ -103,8 +103,19 @@ void Server::handleClient(int connfd)
 
         // std::cout<<parsedQuery["name"].get<std::string>()<<std::endl;
         // Create the response message "hy ${message}"
-        std::string response = "hy ";
-        response += query.getValue();
+        std::string response = "hy";
+        if(!query.getCommand().empty()){
+            response.append(query.getCommand());
+        }
+
+         if(!query.getKey().empty()){
+            response.append(query.getKey());
+        }
+
+        if(!query.getValue().empty()){
+            response.append(query.getValue());
+        }
+
 
         // Send the response back to the client
         send(connfd, response.c_str(), response.size(), 0);
